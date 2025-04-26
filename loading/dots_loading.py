@@ -1,0 +1,10 @@
+def dots_loading(duration=3):
+    import time
+    end_time = time.time() + duration
+    while time.time() < end_time:
+        for i in range(4):
+            import sys
+            sys.stdout.write('\rLoading' + '.' * i + ' ' * (3 - i))
+            sys.stdout.flush()
+            time.sleep(0.5)
+    print()

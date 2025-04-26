@@ -1,0 +1,10 @@
+import time
+import sys
+
+def star_dot_loading(length=20, delay=0.1):
+    for i in range(length + 1):
+        bar = '*' * i + '.' * (length - i)
+        sys.stdout.write(f'\r[{bar}]')
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
